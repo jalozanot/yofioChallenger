@@ -1,0 +1,9 @@
+{
+    "ImportPath": "yofio-test",
+    "GoVersion": "go1.3",
+    "GodepVersion": "v1",
+    "Packages": [
+        "./..."
+    ],
+    "Deps": []
+}
