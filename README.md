@@ -1,12 +1,57 @@
 # YoFioChallenger
 Este es un proyecto para la empresa YoFio
 
-The cloud version is in [Heroku](https://challenger-yofio.herokuapp.com/)
+la aplicacion esta desplegada en la plataforma de heroku para su respectiva pruebas.
+
+Curl para el servicio post /credit-assignment
+
+curl --location --request POST 'https://challenger-yofio.herokuapp.com/credit-assignment' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--data-raw ' {
+"investment":1500
+}'
+
+-------------------------------------------------------------------------------------
+
+Curl para el servicio post /statistics
+
+curl --location --request POST 'https://challenger-yofio.herokuapp.com/statistics' \
+--header 'Accept: application/json' \
+--data-raw ''
+
+
+
 
 ## Install
 
 ```sh
 git clone https://github.com/jalozanot/yofioChallenger.git
+```
+
+subir el proyecto a cualquier IDE como visual studio code o intellij
+ejecutar el comando para descargar dependencias.
+
+go mod tidy 
+
+crear una base de datos posgrest
+
+### PostgreSQL
+
+- host := "localhost"
+- port := "5432"
+- dbname := "test"
+- user := "yofio"
+- password := "yofio"
+
+**Create a user**
+```sh
+    sudo -u postgres psql -p 5432 -c "CREATE USER yofio WITH PASSWORD 'yofio';"
+```
+
+**Create a database**
+```sh
+    sudo -u postgres psql -p 5432 -c "CREATE DATABASE test WITH OWNER yofio;"
 ```
 
 
