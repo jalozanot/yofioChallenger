@@ -10,11 +10,11 @@ import (
 func GetConnectionPostgres() *gorm.DB {
 
 
-	host := "ec2-174-129-229-106.compute-1.amazonaws.com"
+	host := "ec2-52-200-68-5.compute-1.amazonaws.com"
 	port := "5432"
-	dbname := "d2m2hsofvodvak"
-	user := "wbqenwzebxlhed"
-	password := "78b52cbec481afe317aeaf4ecb9356a1969c1ec156bdad3dc2c451ab1d91b74f"
+	dbname := "d3qf19uk0iggoe"
+	user := "zbtituqdyzpmyg"
+	password := "1b85c87b510d5e43352a9c2a9a35ca5e713f84b3e9daa5c28fa383109b711ca6"
 
 	db, err := gorm.Open("postgres",
 		"host="+host+
