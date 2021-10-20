@@ -2,7 +2,6 @@ package controllers
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/jinzhu/gorm"
 	"net/http"
 	"yofio/domain/service"
 	"yofio/infrastructure/adapters/modelRequest"
@@ -53,14 +52,14 @@ func  Create(c *gin.Context) {
 
 func  GetStatf(c *gin.Context) {
 
-	db := c.MustGet("db").(*gorm.DB)
+/*	db := c.MustGet("db").(*gorm.DB)
 	var stats Stats
 
 	db.Raw("select count(*) from investment_entities" ).Row().Scan(&stats.TotalAssigRealizadas)
 	db.Raw("select count(*) from investment_entities where success = true" ).Row().Scan(&stats.TotalAssigSuccess)
 	db.Raw("select count(*) from investment_entities where success = false" ).Row().Scan(&stats.TotalAssigFail)
 	db.Raw("select avg(investment)::numeric(12, 1) from investment_entities where success = true" ).Row().Scan(&stats.AvgInvestmentSuccess)
-	db.Raw("select avg(investment)::numeric(12, 1) from investment_entities where success = false" ).Row().Scan(&stats.AvgInvestmentFail)
+	db.Raw("select avg(investment)::numeric(12, 1) from investment_entities where success = false" ).Row().Scan(&stats.AvgInvestmentFail)*/
 
-	c.JSON(http.StatusCreated,   stats  )
+	c.JSON(http.StatusCreated,   "hola"  )
 }

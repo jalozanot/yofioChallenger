@@ -1,6 +1,6 @@
 package database_client
 
-import (
+/*import (
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 	"log"
@@ -32,4 +32,4 @@ func GetConnectionPostgres() *gorm.DB {
 	db.AutoMigrate(&model.InvestmentEntity{})
 
 	return db
-}
+}*/
