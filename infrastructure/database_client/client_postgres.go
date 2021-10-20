@@ -1,6 +1,6 @@
 package database_client
 
-/*import (
+import (
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 	"log"
@@ -10,11 +10,11 @@ package database_client
 func GetConnectionPostgres() *gorm.DB {
 
 
-	host := "ec2-52-200-68-5.compute-1.amazonaws.com"
+	host := "ec2-54-92-230-7.compute-1.amazonaws.com"
 	port := "5432"
-	dbname := "d3qf19uk0iggoe"
-	user := "zbtituqdyzpmyg"
-	password := "1b85c87b510d5e43352a9c2a9a35ca5e713f84b3e9daa5c28fa383109b711ca6"
+	dbname := "d12sdavvqmev9l"
+	user := "mwhdjvrlkijbnh"
+	password := "fba5a673cb8a35c2114a9ce803060b858c0e65ef6011228b4a6e78bcab93954f"
 
 	db, err := gorm.Open("postgres",
 		"host="+host+
@@ -32,4 +32,4 @@ func GetConnectionPostgres() *gorm.DB {
 	db.AutoMigrate(&model.InvestmentEntity{})
 
 	return db
-}*/
+}

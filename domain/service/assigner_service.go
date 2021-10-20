@@ -3,6 +3,7 @@ package service
 import (
 	"errors"
 	"github.com/gin-gonic/gin"
+	"github.com/jinzhu/gorm"
 	"yofio/domain/model"
 )
 
@@ -25,7 +26,7 @@ type Assign struct {
 
 func CreateCredit(investment int32, c *gin.Context) ( int32 , int32 , int32 , error ){
 
-	//db := c.MustGet("db").(*gorm.DB)
+	db := c.MustGet("db").(*gorm.DB)
 	var creditAsigneer CreditAssigner
 	var creditEntity model.InvestmentEntity
 
@@ -40,7 +41,7 @@ func CreateCredit(investment int32, c *gin.Context) ( int32 , int32 , int32 , er
 
 	if err != nil {
 		creditEntity.Success = false
-	//	db.Create(&creditEntity)
+		db.Create(&creditEntity)
 		return 0,0,0, errors.New("insufficient investment")
 	} else {
 
@@ -48,7 +49,7 @@ func CreateCredit(investment int32, c *gin.Context) ( int32 , int32 , int32 , er
 
 	}
 
-//	db.Create(&creditEntity)
+	db.Create(&creditEntity)
 
 	return credit300, credit500, credit700, nil
 

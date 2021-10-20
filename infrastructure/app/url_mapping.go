@@ -3,18 +3,18 @@ package app
 import (
 	"github.com/gin-gonic/gin"
 	"yofio/infrastructure/controllers"
-//	"yofio/infrastructure/database_client"
+	"yofio/infrastructure/database_client"
 )
 
 func MapUrls() *gin.Engine {
 
-	//db := database_client.GetConnectionPostgres()
+	db := database_client.GetConnectionPostgres()
 
 	// Provide db variable to controllers
-	/*router.Use(func(c *gin.Context) {
+	router.Use(func(c *gin.Context) {
 		c.Set("db", db)
 		c.Next()
-	})*/
+	})
 
 	ping := router.Group("/")
 	{
