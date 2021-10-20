@@ -5,21 +5,23 @@ la aplicacion esta desplegada en la plataforma de heroku para su respectiva prue
 
 Curl para el servicio post /credit-assignment
 
+```
 curl --location --request POST 'https://challenger-yofio.herokuapp.com/credit-assignment' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --data-raw ' {
 "investment":1500
 }'
-
+```
 -------------------------------------------------------------------------------------
 
 Curl para el servicio post /statistics
 
+```
 curl --location --request POST 'https://challenger-yofio.herokuapp.com/statistics' \
 --header 'Accept: application/json' \
 --data-raw ''
-
+```
 
 
 
