@@ -88,7 +88,7 @@ Crea una asignación basada en la inversión proporcionada. si la inversion no e
 | Name           | Value            |
 | -------------- | ---------------- |
 | Content-Type   | application/json |
-| Content-Length | (Body length)    |
+
 
 **Body**
 
